@@ -1,0 +1,24 @@
+.section .SEG11, "wa"
+.align 4
+
+.fill 0xcde0
+ELF_DUMP_HEAD: # 0x96CDE0 - 0x9FB6EF (whole SEG11)
+	.incbin "dump.data"
+ELF_DUMP_LENGTH=.-ELF_DUMP_HEAD
+
+unk_9DF8A8=ELF_DUMP_HEAD+(0x9DF8A8-0x96CDE0)
+off_9DE880=ELF_DUMP_HEAD+(0x9DE880-0x96CDE0)
+unk_9E08A8=ELF_DUMP_HEAD+(0x9E08A8-0x96CDE0)
+unk_9E18A8=ELF_DUMP_HEAD+(0x9E18A8-0x96CDE0)
+unk_9E28A8=ELF_DUMP_HEAD+(0x9E28A8-0x96CDE0)
+
+
+#.global ELF_DUMP_HEAD
+#.global ELF_DUMP_LENGTH
+
+.global unk_9DF8A8
+.global off_9DE880
+.global unk_9E08A8
+.global unk_9E18A8
+.global unk_9E28A8
+

@@ -31,3 +31,7 @@
 # Debug files
 *.dSYM/
 *.su
+
+# CTags file
+.tags
+.tags_sorted_by_file
