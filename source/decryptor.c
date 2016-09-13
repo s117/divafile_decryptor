@@ -48,7 +48,7 @@ int sub_5607DC(uint8_t *p_payload, uint32_t len_payload) {
 int decrypt_divafile(uint8_t *p_file, uint32_t size) {
 	if (check_divafile(p_file, size) == 0) {
 		logger_log("\t- invalid divafile.\n");
-		return 1;
+		return -1;
 	}
 	else {
 		logger_log("\t- valid divafile.\n");
