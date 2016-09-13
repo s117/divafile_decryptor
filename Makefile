@@ -10,10 +10,11 @@ endif
 #---------------------------------------------------------------------------------
 #  TITLE, APPID, CONTENTID, ICON0 SFOXML before ppu_rules.
 #---------------------------------------------------------------------------------
-TC_ADD		:=	`date +%d%H%M`
+TC_ADD		:=	`date +%y%m%d%H%M`
+GIT_VER		:=  `git rev-list HEAD -n 1 | cut -c 1-7`
 ICON0		:=	ICON0.PNG
 
-TITLE		:=	DIVAFILE Decryptor
+TITLE		:=	DIVAFILE Decryptor build_$(TC_ADD)-$(GIT_VER)
 APPID		:=	NULL00000
 CONTENTID	:=	UP0001-$(APPID)_00-0000000000000000
 
